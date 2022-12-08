@@ -22,9 +22,9 @@ import (
 // Note that ‘n64’ represents how many bytes were written, not read.
 func CopyLine(writer io.Writer, reader io.Reader) (n64 int64, err error) {
 
-	for {
-		var eof bool
+	var eof bool
 
+	for {
 		var r0 rune
 		var size0 int
 		{
@@ -111,6 +111,10 @@ func CopyLine(writer io.Writer, reader io.Reader) (n64 int64, err error) {
 
 	/////// BREAK
 		break
+	}
+
+	if eof && n64 <= 0 {
+		return n64, io.EOF
 	}
 
 	return n64, nil

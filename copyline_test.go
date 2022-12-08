@@ -191,3 +191,41 @@ func TestCopyLine(t *testing.T) {
 		}
 	}
 }
+
+func TestCopyLine_empty(t *testing.T) {
+
+	var reader io.Reader = strings.NewReader("")
+
+	var actualStorage strings.Builder
+
+	actualN, err := netln.CopyLine(&actualStorage, reader)
+	if nil == err {
+		t.Error("Expected an error but did not actually get one.")
+		t.Logf("ERROR: (%T) %q", err, err)
+		return
+	}
+
+	{
+		var expected error = io.EOF
+		var actual   error = err
+
+		if expected != actual {
+			t.Errorf("The actual error was not what was expeceted.")
+			t.Logf("EXPECTED-ERROR: (%T) %q", expected, expected)
+			t.Logf("ACTUAL-ERROR:   (%T) %q", actual,   actual)
+			return
+		}
+	}
+
+	{
+		var expected int64 = 0
+		var actual   int64 = actualN
+
+		if expected != actual {
+			t.Error("The actual number of bytes written is not what was expected.")
+			t.Logf("EXPECTED: %d bytes", expected)
+			t.Logf("ACTUAL:   %d bytes", actual)
+			return
+		}
+	}
+}
