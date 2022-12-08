@@ -138,6 +138,13 @@ func TestCopyLine(t *testing.T) {
 			Src:      "r۵≡🙂"+"\r\n"+"once twice thrice fource"+"\r\n",
 			Expected: "r۵≡🙂",
 		},
+
+
+
+		{
+			Src:      "once"+"\r\n"+"twice"+"\r\n"+"thrice"+"\r\n"+"fource"+"\r\n",
+			Expected: "once",
+		},
 	}
 
 	for testNumber, test := range tests {
