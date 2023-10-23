@@ -1,7 +1,7 @@
 package netln_test
 
 import (
-	"github.com/reiver/go-netln"
+	"sourcecode.social/reiver/go-netln"
 
 	"io"
 	"strings"

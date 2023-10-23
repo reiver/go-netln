@@ -5,14 +5,14 @@ i.e., lines that end with a "\r\n".
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-netln
+Online documentation, which includes examples, can be found at: http://godoc.org/sourcecode.social/reiver/go-netln
 
-[![GoDoc](https://godoc.org/github.com/reiver/go-netln?status.svg)](https://godoc.org/github.com/reiver/go-netln)
+[![GoDoc](https://godoc.org/sourcecode.social/reiver/go-netln?status.svg)](https://godoc.org/sourcecode.social/reiver/go-netln)
 
 ## Examples
 
 ```go
-import "github.com/reiver/go-netln"
+import "sourcecode.social/reiver/go-netln"
 
 // ...
 

@@ -1,4 +1,4 @@
-module github.com/reiver/go-netln
+module sourcecode.social/reiver/go-netln
 
 go 1.18
 
