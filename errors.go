@@ -1,9 +1,9 @@
 package netln
 
 import (
-	"github.com/reiver/go-fck"
+	"sourcecode.social/reiver/go-erorr"
 )
 
 const (
-	errRuneError = fck.Error("rune error")
+	errRuneError = erorr.Error("rune error")
 )
